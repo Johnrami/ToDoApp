@@ -1,0 +1,52 @@
+.parallax {
+    background: url(https://img00.deviantart.net/1964/i/2013/028/2/f/wood_texture_by_xjobo9-d5t1egu.jpg );
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.hfont {
+    font-family: 'Catamaran', sans-serif;
+    font-size: 70px;
+}
+
+.pfont {
+    font-family: 'Gaegu', cursive;
+    margin: 0;
+    padding: 10px;
+}
+
+.sm {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+}
+
+.pad {
+    padding-bottom: 5px;
+    padding-top: 0
+}
+
+.btn {
+    border-radius: 0;
+    padding-top: 0px;
+    padding-bottom: 0px
+}
+
+.check {
+    float: left;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.delete {
+    float: right;
+    margin-top: 4px;
+    margin-right: 10px;
+}
+
+
+
