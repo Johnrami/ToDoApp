@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+.parallax {
+    background: url(https://img00.deviantart.net/1964/i/2013/028/2/f/wood_texture_by_xjobo9-d5t1egu.jpg );
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
