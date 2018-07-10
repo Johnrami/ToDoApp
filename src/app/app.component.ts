@@ -6,27 +6,47 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  todoInput = '';
+  todoInput: string = "";
   todos = [];
 
   createTodo() {
-    this.todos.push(this.todoInput);
+    let trimmedInput = this.todoInput.trim();
+
+    if(trimmedInput !=""){
+      this.todos.push({ 
+        isChecked: false,
+        name: this.todoInput
+      });
+    }
+
     this.todoInput = "";
   }
-
+  
+  checkOffTodo(chore) {
+    chore.isChecked = (chore.isChecked) ? false:true;
+  }
+  
   editTodo(chore) {
-    console.log(chore);
     let index = this.todos.indexOf(chore);
-    console.log(index);
+    
+    let OGText = this.todos[index].name;
 
-    this.todos[index] = prompt('please write new todo');
+    this.todos[index].name = prompt('please write new todo', this.todos[index].name);
+
+    if (this.todos[index].name == null) {
+      this.todos[index].name = OGText;
+    }
   }
 
   deleteTodo(chore) {
     let index = this.todos.indexOf(chore);
+
     this.todos.splice(index, 1);
   }
   
+  deleteAll() {
+    this.todos = [];
+  }
 
 }
 

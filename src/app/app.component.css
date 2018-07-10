@@ -27,17 +27,35 @@
     padding-bottom: 0px
 }
 
+.edit {
+    float: right;
+    margin-top: 6px;
+}
+
 .check {
     float: left;
-    margin-top: 15px;
+    margin-top: 8px;
     margin-left: 10px;
 }
 
 .delete {
     float: right;
-    margin-top: 4px;
+    margin-top: 8px;
     margin-right: 10px;
 }
 
+.dAll {
+    text-align: center;
+    font-size: 30px;
+}
 
+.deleteAll {
+    text-align: center;
+    padding-left: 89px;
+    padding-right: 89px;
+}
+
+.strike {
+    text-decoration: line-through;
+}
 

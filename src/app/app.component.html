@@ -9,13 +9,17 @@
       <input [(ngModel)]="todoInput" class="pad text-center" (keyup.enter)="createTodo(chore)" placeholder="What's do today?">
     </div>
   </div>
+  <div class="dAll">
+  <button class="deleteAll mt-3" (click)="deleteAll()">Delete All</button>
+  </div>
   <div class="row mt-3">
     <div class="col text-center">
       <p *ngFor="let chore of todos.reverse()" class="border pfont bg-light sm"> 
-          <input type="checkbox" class="check">
-          {{ chore }}
-          <i class="far fa-edit" (click)="editTodo(chore)"></i>
-          <i (click)="deleteTodo(chore)" class="fas fa-backspace delete"></i>           
+        <i *ngIf="chore.isChecked === false" class="far fa-circle check" (click)="checkOffTodo(chore)"></i>
+        <i *ngIf="chore.isChecked === true" class="far fa-check-circle check" (click)="checkOffTodo(chore)"></i>
+         <span [ngClass]="{'strike': chore.isChecked}">{{ chore.name }} </span>
+            <i class="far fa-edit edit" (click)="editTodo(chore)"></i>
+            <i (click)="deleteTodo(chore)" class="fas fa-backspace delete"></i>           
         </p>
       
     </div>
