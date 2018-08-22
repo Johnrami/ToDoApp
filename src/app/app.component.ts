@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   todoInput: string = "";
   todos = [];
-
+y
   createTodo() {
     let trimmedInput = this.todoInput.trim();
 
